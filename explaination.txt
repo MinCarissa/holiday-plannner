@@ -1,0 +1,13 @@
+>> webpages
+index.html: home page
+employee.html: view an employee vacations by a manager
+employeeEdit.html: an employee can submit a request for vacation
+manager: for manager to view the summary of the vacation
+
+>> To run the application
+1. conda create -p venv python==3.8 -y (creat a virtual environment)
+2. pip install -r requirements.txt
+3. python3 app.py (to run the application)
+4. "python setup.py install" will generate a "dist" folder, 
+to create a package, for distribution
+
