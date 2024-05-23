@@ -1,0 +1,17 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Employee Vacation Days</h1>
+        <div class="mb-3">
+            <label class="form-label">Employee ID: </label>
+            <label class="form-label">{{employee_id}}</label>
+        </div>
+        <h3>Past Vacation Requests</h3>
+        <div class="mb-3">
+            {% for table in tables %}
+            {{ table|safe }}
+            {% endfor %}        
+        </div>
+    </div>
+   <body>
+</html>

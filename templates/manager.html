@@ -1,0 +1,46 @@
+<html>
+<body>
+    <div class="login">
+        <div class="mb-3">
+            <label><h3>Manager ID: {{manager_id}}</h3></label>
+        </div>
+
+       <h3>Vacation Summary</h3>
+       
+        <div class="mb-3">
+            <label class="form-label"># of requests: </label>
+            <label class="form-label">{{request_count}}</label>
+        </div>
+        <div class="mb-3">
+            <label class="form-label"># of pending: </label>
+            <label class="form-label">{{pending_count}}</label>
+        </div>
+        <div class="mb-3">
+            <label class="form-label"># of approved: </label>
+            <label class="form-label">{{approve_count}}</label>
+        </div>
+        <div class="mb-3">
+            <label class="form-label"># of rejected: </label>
+            <label class="form-label">{{reject_count}}</label>
+        </div>
+     
+        <form action="{{url_for('get_overlapping')}}" method="post">
+            <div class="mb-3">
+            <label class="form-label">Overlapping requests: </label>
+            <input type="submit" value="Check verlapping Requests" />   
+            </div>
+        </form>
+
+        <form action="{{url_for('view_employee')}}" method="post">
+            <div class="mb-3" name="employee_div">
+                <label class="form-label">Check Employee Vacation Days: </label>
+                <input class="form-control" type="text" name="employee_id"
+                placeholder="employee id"/>
+                <label class="form-label">{{res_employee}}</label>
+                <input type="hidden" name="page" value="manager" />
+            </div>
+            <input type="submit" value="Send Request" />
+        </form>
+    </div>
+   <body>
+</html>

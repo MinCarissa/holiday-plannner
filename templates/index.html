@@ -1,0 +1,29 @@
+<h1>Welcome to the home page</h1>
+
+<h2>Employee</h2>
+<form action="{{url_for('edit_employee')}}" method="post">
+    <div class="mb-3" name="employee_div">
+        <label class="form-label">Provide Employee ID: </label>
+        <input class="form-control" type="text" name="employee_id"
+        placeholder="employee id"/>
+        <label class="form-label">{{res_employee}}</label>
+        <input type="hidden" name="page" value="index" />
+    </div>
+    <input type="submit" value="Send Request" />
+</form>
+
+
+<h2>Manager</h2>
+<form action="{{url_for('get_summary')}}" method="post">
+    <div class="mb-3">
+        <label class="form-label">Manager ID: </label>
+        <input class="form-control" type="text" name="manager_id"
+        placeholder="manager id"/>
+        <label class="form-label">{{res_manager}}</label>
+    </div>
+    <input type="submit" value="Get Vacation Summary" />
+</form>
+
+
+
+

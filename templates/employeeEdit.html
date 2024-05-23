@@ -1,0 +1,18 @@
+<html>
+<body>
+    <h1>Employee details: </h1>
+    <div class="mb-3">
+        {% for table in tables %}
+        {{ table|safe }}
+        {% endfor %}        
+    </div>
+    <form action="{{url_for('request_vac')}}" method="post">
+        <div class="mb-3">
+            <label class="form-label">Request Vacation Days: </label>
+            <input class="form-control" type="number" name="vacation_days"
+            placeholder="vacation days" min="0" max="30"/>
+        </div>
+    </form>
+   
+   <body>
+</html>
